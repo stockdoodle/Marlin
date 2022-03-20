@@ -678,6 +678,7 @@ enum StealthIndex : uint8_t {
     pwmconf.pwm_grad = 14;
     pwmconf.pwm_ofs = 36;
     st.PWMCONF(pwmconf.sr);
+    // Disable short protection entirely
 
     TERN(HYBRID_THRESHOLD, st.set_pwm_thrs(hyb_thrs), UNUSED(hyb_thrs));
 
